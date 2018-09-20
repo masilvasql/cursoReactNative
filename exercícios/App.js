@@ -1,23 +1,15 @@
-import React, {Component} from 'react'
-import {View, Text,StatusBar,StyleSheet} from 'react-native'
+import React from 'react';
+import Componente  from './src/Componente'
 
-export default class App extends Component {
-	render(){
-		return(
-			<View style={styles.container}>
-				<Text style={styles.f20}>App!</Text>
-			</View>
-		)
-	}
+import {AppRegistry} from 'react-native';
+
+export default class App extends React.Component {
+  render() {
+    return (
+        <Componente/>
+    );
+  }
 }
 
-const styles = StyleSheet.create({
-	container:{
-		flex:1,
-		justifyContent:'center',
-		alignItems:'center'
-	},
-	f20:{
-		fontSize: 40,
-	}
-})
+AppRegistry.registerComponent('App',()=>App)
+
