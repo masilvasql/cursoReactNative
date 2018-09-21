@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native'
+import {StyleSheet, StatusBar} from 'react-native'
 
 export default StyleSheet.create({
     ex:{
@@ -8,6 +8,7 @@ export default StyleSheet.create({
         borderWidth: 2,
         borderColor: '#222',
         fontSize: 22,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        marginTop: StatusBar.currentHeight,
     }
 })

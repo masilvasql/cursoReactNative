@@ -1,15 +1,21 @@
-import React from 'react';
-import Componente  from './src/Componente'
+import React from 'react';  
+import {AppRegistry, View,StatusBar} from 'react-native';
+import Menu from './src/Menu'
 
-import {AppRegistry, View} from 'react-native';
 
 export default class App extends React.Component {
   render() {
     return (
-        <Componente/>
+     
+        <Menu/>
+
+        
     );
   }
 }
 
-AppRegistry.registerComponent('App',()=>App)
+ AppRegistry.registerComponent('App',()=>App)
+
+
+
 
