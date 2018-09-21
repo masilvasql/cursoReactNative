@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Simples from './componentes/simples'
 import ParImpar from './componentes/ParImpar'
+import {Inverter, MegaSena} from './componentes/Multi'
+
 
 export default class Componente extends React.Component {
   render() {
@@ -13,6 +15,12 @@ export default class Componente extends React.Component {
         />
         <ParImpar
           numero = {2}
+        />
+        <Inverter
+          texto = 'React Native'
+        />
+        <MegaSena
+          numeros = {6}
         />
       </View>
     );
