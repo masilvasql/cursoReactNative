@@ -1,9 +1,10 @@
 import React from 'react'
 import {View, Text} from 'react-native'
+import Padrao from '../estilo/Padrao'
 
 export default (props)=>
     <View>
-        <Text>{props.texto}</Text>
-        <Text>{props.sobrenome}</Text>
+        <Text style={Padrao.ex}>{props.texto}</Text>
+        <Text style={Padrao.ex}>{props.sobrenome}</Text>
     </View>
      
