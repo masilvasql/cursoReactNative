@@ -21,6 +21,7 @@ const alunos = [
     { id: 17, nome: 'Pedro', nota: 4.8 },
     { id: 18, nome: 'Junior', nota: 8.8 },
     { id: 19, nome: 'Douglas', nota: 9.8 },
+    { id: 19, nome: 'Douglas', nota: 9.8 },
 ]
 
 const itemEstilo = {
@@ -29,6 +30,13 @@ const itemEstilo = {
     backgroundColor: '#ddd',
     borderWidth: 0.5,
     borderColor: '#222',
+ 
+    ///Flex
+
+    alignItems: 'center',
+    justifyContent:'space-between',
+    flexDirection : 'row',
+    
 }
 
 export const Aluno = props =>
