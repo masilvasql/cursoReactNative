@@ -10,7 +10,7 @@ import {Entrada} from './Entrada'
 //             onChangeText={props.chamarQuandoMudar}
 //         />
 //     </View>
-
+// componente está em outro arquivo
 export class TextoSincronizado extends Component {
     state = {
         texto: ''
