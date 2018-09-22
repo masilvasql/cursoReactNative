@@ -13,7 +13,6 @@ export default class Contador extends Component{
 
     limpar = ()=>{
         this.setState({numero:this.props.numeroInicial})
-        console.log('deu boa')
     }
 
 
