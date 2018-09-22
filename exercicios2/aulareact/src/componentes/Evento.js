@@ -22,7 +22,6 @@ export default class Evento extends Component{
                     style={Padrao.input}
                     onChangeText = {this.alterarTexto}
                 >
-                
                 </TextInput>
             </View>
         )
