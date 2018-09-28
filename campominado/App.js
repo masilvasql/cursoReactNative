@@ -20,6 +20,8 @@ export default class App extends React.Component {
         <Field opened />
         <Field opened mined/>
         <Field opened mined exploded/>
+        <Field flagged />
+        <Field flagged opened/>
       </View>
     );
   }
