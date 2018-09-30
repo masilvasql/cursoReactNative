@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, Text } from 'react-native'
+import { View, StyleSheet, Text, TouchableWithoutFeedback } from 'react-native'
 // import {Icon} from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import moment from 'moment'
@@ -28,9 +28,11 @@ export default props => {
 
     return (
         <View style={styles.container}>
-            <View style={styles.checkContainer}>
-                {check}
-            </View>
+            <TouchableWithoutFeedback onPress ={()=> props.toggleTask(props.id)}>
+                <View style={styles.checkContainer}>
+                    {check}
+                </View>
+            </TouchableWithoutFeedback>
             <View>
                 <Text style={[styles.description, descStyle]}>{props.desc}</Text>
                 <Text style={styles.date}>
@@ -42,39 +44,39 @@ export default props => {
 }
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         paddingVertical: 10,
         flexDirection: 'row',
-        borderBottomWidth:1,
-        borderColor:'#aaa'
+        borderBottomWidth: 1,
+        borderColor: '#aaa'
     },
-    checkContainer:{
+    checkContainer: {
         alignItems: 'center',
-        justifyContent:'center',
-        width:'20%',
+        justifyContent: 'center',
+        width: '20%',
     },
-    pending:{
-        borderWidth:1,
-        height:25,
-        width:25,
-        borderRadius:15,
-        borderColor:'#555',
+    pending: {
+        borderWidth: 1,
+        height: 25,
+        width: 25,
+        borderRadius: 15,
+        borderColor: '#555',
     },
-    done:{
-        height:25,
-        width:25,
-        borderRadius:15,
-        backgroundColor:'#4d7031',
-        alignItems:'center',
-        justifyContent:'center'
+    done: {
+        height: 25,
+        width: 25,
+        borderRadius: 15,
+        backgroundColor: '#4d7031',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
-    description:{
-        color:commonStyles.colors.mainText,
-        fontSize: 15,  
+    description: {
+        color: commonStyles.colors.mainText,
+        fontSize: 15,
     },
-    date:{
-        color:commonStyles.colors.subText,
-        fontSize:12
+    date: {
+        color: commonStyles.colors.subText,
+        fontSize: 12
     }
 })
 

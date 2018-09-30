@@ -25,7 +25,15 @@ export default class Agenda extends Component {
         ]
     }
 
-
+    toggleTask = id =>{
+        const tasks = [...this.state.tasks]
+        tasks.forEach(task =>{
+            if(task.id === id){
+                task.doneAt = task.doneAt ? null : new Date()
+            }
+        })
+        this.setState({tasks}) // state tasks está recebendo a variável, não é necessário uma receber a outra pois possuem o mesmo nome
+    }
 
     render() {
         return (
@@ -42,9 +50,8 @@ export default class Agenda extends Component {
                    <FlatList
                         data ={this.state.tasks}
                         keyExtractor={item => `${item.id}`}
-                        renderItem = {({item})=> <Task {...item}/>}
+                        renderItem = {({item})=> <Task {...item} toggleTask ={this.toggleTask}/>}
                    />
-
                 </View>
             </View>
         )
