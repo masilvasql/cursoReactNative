@@ -19,10 +19,10 @@ export default props => {
         check = (
             <View style={styles.pending}>
                 <Icon name='check' size={20} color={commonStyles.colors.secondary} />
-
             </View>
         )
     }
+    
     const descStyle = props.doneAt !== null ?
         { textDecorationLine: 'line-through' } : {}
 
